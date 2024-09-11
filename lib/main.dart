@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:laundry/cart.dart';
+import 'package:laundry/check_page.dart';
 import 'package:laundry/pages/home_page.dart';
+
 
 void main(){
   runApp(const MyApp());
@@ -9,9 +12,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home:HomePage (),
+      routes:{
+       '/home_page':(context) => HomePage(),
+       '/check_page':(context) => Checkpage(),
+       '/cart':(context) => Cartpage(),
+      }
     );
   }
 }

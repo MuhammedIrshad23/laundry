@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:laundry/check_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -94,7 +95,9 @@ class HomePage extends StatelessWidget {
                             Column(
                               children: [
                                 ElevatedButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(context, MaterialPageRoute(builder: (context) => Checkpage()));
+                                  },
                                   child: Text(
                                     'CHECK IT!',
                                     style: TextStyle(
